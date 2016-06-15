@@ -13,30 +13,18 @@ var _ = require('lodash');
 
 gulp.task('styles', function () {
 
-  var injectFiles = gulp.src([
-    path.join(conf.paths.src, '/app/assets/sass/**/*.scss')
-  ], { read: false });
-  //
-  // var injectOptions = {
-  //   transform: function(filePath) {
-  //     filePath = filePath.replace(conf.paths.src + '/app/', '');
-  //     return '@import "' + filePath + '";';
-  //   },
-  //   starttag: '// injector',
-  //   endtag: '// endinjector',
-  //   addRootSlash: false
-  // };
+    // var injectFiles = gulp.src([
+    //     path.join(conf.paths.src, '/assets/sass/**/*.scss'),
+    //     path.join('!' + conf.paths.src, '/assets/sass/main.scss')
+    // ], { read: false });
 
-
-  return gulp.src(
-        path.join(conf.paths.src, '/app/assets/sass/**/*.scss')
-      )
-      .pipe($.inject(injectFiles))
-      .pipe(wiredep(_.extend({}, conf.wiredep)))
-      .pipe($.sourcemaps.init())
-      .pipe($.sass.sync().on('error', $.sass.logError))
-      .pipe($.autoprefixer()).on('error', conf.errorHandler('Autoprefixer'))
-      .pipe($.sourcemaps.write())
-      .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app/')))
-      .pipe(browserSync.reload({ stream: true }));
+    return gulp.src([conf.paths.src + '/assets/sass/main.scss'])
+        // .pipe($.inject(injectFiles))
+        .pipe(wiredep(_.extend({}, conf.wiredep)))
+        .pipe($.sourcemaps.init())
+        .pipe($.sass.sync().on('error', $.sass.logError))
+        .pipe($.autoprefixer()).on('error', conf.errorHandler('Autoprefixer'))
+        .pipe($.sourcemaps.write())
+        .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/css')))
+        .pipe(browserSync.reload({ stream: true }));
 });
