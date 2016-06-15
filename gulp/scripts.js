@@ -1,7 +1,7 @@
 'use strict';
 
 var gulp = require('gulp');
-var conf = require('./conf');
+var conf = require('./config');
 
 var browserSync = require('browser-sync');
 
