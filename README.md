@@ -16,6 +16,6 @@ It uses the Webcomponents.js polyfills and few other things.
 
 ## Available commands:
 
-`gulp` - lists all the gulp tasks available
-`gulp watch` - Serves the index.html page and detects changes and converts SCSS in CSS files
-`gulp build` - Concatenates and minifies all files per component.
+* `gulp` - lists all the gulp tasks available
+* `gulp watch` - Serves the index.html page and detects changes and converts SCSS in CSS files
+* `gulp build` - Concatenates and minifies all files per component.
