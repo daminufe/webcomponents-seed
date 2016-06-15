@@ -13,11 +13,6 @@ var _ = require('lodash');
 
 gulp.task('styles', function () {
 
-    // var injectFiles = gulp.src([
-    //     path.join(conf.paths.src, '/assets/sass/**/*.scss'),
-    //     path.join('!' + conf.paths.src, '/assets/sass/main.scss')
-    // ], { read: false });
-
     return gulp.src([conf.paths.src + '/assets/sass/main.scss'])
         // .pipe($.inject(injectFiles))
         .pipe(wiredep(_.extend({}, conf.wiredep)))
