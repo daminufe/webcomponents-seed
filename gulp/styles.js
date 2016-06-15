@@ -14,7 +14,7 @@ var _ = require('lodash');
 gulp.task('styles', function () {
 
   var injectFiles = gulp.src([
-    path.join(conf.paths.src, '/app/**/*.scss')
+    path.join(conf.paths.src, '/app/assets/sass/**/*.scss')
   ], { read: false });
   //
   // var injectOptions = {
@@ -28,9 +28,9 @@ gulp.task('styles', function () {
   // };
 
 
-  return gulp.src([
+  return gulp.src(
         path.join(conf.paths.src, '/app/assets/sass/**/*.scss')
-      ])
+      )
       .pipe($.inject(injectFiles))
       .pipe(wiredep(_.extend({}, conf.wiredep)))
       .pipe($.sourcemaps.init())
