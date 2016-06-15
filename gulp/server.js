@@ -5,7 +5,6 @@ var gulp = require('gulp');
 var conf = require('./config');
 
 var browserSync = require('browser-sync');
-// var browserSyncSpa = require('browser-sync-spa');
 
 var util = require('util');
 
@@ -42,10 +41,6 @@ function browserSyncInit(baseDir, browser) {
     https: false
   });
 }
-
-// browserSync.use(browserSyncSpa({
-//   selector: '[ng-app]'// Only needed for angular apps
-// }));
 
 gulp.task('serve', ['watch'], function () {
   browserSyncInit([path.join(conf.paths.tmp, '/serve'), conf.paths.src]);

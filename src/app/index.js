@@ -4,9 +4,8 @@
     example();
 
     function example() {
-
         console.log('DO SOMETHING HERE!');
-        console.log('DO SOMETHING HERE2!');
+        console.log('DO SOMETHING HERE3!');
     }
 
 })();
