@@ -15,19 +15,22 @@
     <!-- endinject -->
     <!-- endbuild -->
 
-    <!-- build:js js/lib.js -->
-    <!-- bower:js -->
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:js js/app.js -->
-    <!-- inject:js -->
-    <!-- endinject -->
-    <!-- endbuild -->
   </head>
   <body>
 
     <h1>Web Components Seed !!!!</h1>
+
+    <!-- build:js(src) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- run `gulp inject` to automatically populate bower script dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,src}) scripts/app.js -->
+
+    <!-- inject:js -->
+    <!-- js files will be automatically inserted here -->
+    <!-- endinject -->
 
   </body>
 </html>
