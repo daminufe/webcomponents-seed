@@ -7,9 +7,12 @@
         console.log('DO SOMETHING HERE!');
     }
 
-    let calculateAmortization = (arg1,arg2,arg3) => {
-        let a = 0;
+    let exampleES6 = (arg1,arg2,arg3) => {
+        let a = 2;
+        console.log(a);
         return a;
     }
+
+    exampleES6();
 
 })();
