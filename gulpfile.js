@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var wrench = require('wrench');
+var gutil = require('gulp-util');
 
 /**
  *  This will load all js files in the gulp directory
@@ -11,6 +12,9 @@ wrench.readdirSyncRecursive('./gulp').filter(function(file) {
     require('./gulp/' + file);
 });
 
-gulp.task('default', ['clean'], function () {
-    gulp.start('build');
+gulp.task('default', function () {
+    gutil.log(gutil.colors.blue('[' + 'Available Commands' + ']'));
+    gutil.log(gutil.colors.blue('gulp'),'Lists all available gulp commands.');
+    gutil.log(gutil.colors.blue('gulp serve'),'Serves the index.html page and detects changes and converts SCSS in CSS files.');
+    gutil.log(gutil.colors.blue('gulp build'),'Concatenates and minifies all files per component.');
 });
