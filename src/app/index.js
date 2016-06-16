@@ -5,7 +5,6 @@
 
     function example() {
         console.log('DO SOMETHING HERE!');
-        console.log('DO SOMETHING HERE3!');
     }
 
 })();
