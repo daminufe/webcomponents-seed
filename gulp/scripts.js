@@ -20,7 +20,7 @@ gulp.task('scripts', function () {
         .pipe($.sourcemaps.init())
         .pipe($.babel({
             presets: ['es2015']
-        }))
+        }).on('error', conf.errorHandler('BabelError')))
         .pipe($.concat('all.js'))
         .pipe($.sourcemaps.write('.'))
         .pipe(browserSync.reload({ stream: true }))
