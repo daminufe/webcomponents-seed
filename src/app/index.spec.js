@@ -3,8 +3,8 @@
 
     describe('controller', function(){
 
-        it('should be defined', function() {
-            
+        it('adds two numbers together', function () {
+            expect(1 + 2).toEqual(3);
         });
     });
 })();
