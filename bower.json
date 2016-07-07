@@ -1,0 +1,9 @@
+{
+  "name": "webComponentsSeed",
+  "version": "0.0.1",
+  "dependencies": {
+    "lodash": "^4.13.1",
+    "webcomponentsjs": "^0.7.22"
+  },
+  "devDependencies": {}
+}
