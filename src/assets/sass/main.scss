@@ -1,5 +1,7 @@
 @import 'variables';
 @import 'example';
+@import '../../components/component1/component1';
+@import '../../components/component2/component2';
 
 body {
   position: absolute;

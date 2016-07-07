@@ -13,6 +13,15 @@
 
         let result =_.filter(users, (item) => { return !item.active; });
         console.log(result);
+
+        // Code To append component HTML - TEST
+        // var link = document.querySelector('link[rel="import"]');
+        // var content = link.import;
+        //
+        // // Grab DOM from warning.html's document.
+        // var el = content.querySelector('.c1');
+        //
+        // document.body.appendChild(el.cloneNode(true));
     }
 
     let exampleES6 = (arg1,arg2,arg3) => {
